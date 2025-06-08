@@ -192,7 +192,7 @@ body {
     justify-content: space-between;
 }
 
-button, .back-btn {
+button, .back-btn ,a {
     background: #8f7a66;
     color: white;
     border: none;
@@ -204,7 +204,7 @@ button, .back-btn {
     text-decoration: none;
 }
 
-button:hover, .back-btn:hover {
+button:hover, .back-btn:hover ,a:hover {
     background: #9f8b77;
 }
 
