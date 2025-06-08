@@ -66,11 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 渲染游戏板
     function renderBoard() {
-        // 移除所有现有的方块
         const tiles = document.querySelectorAll('.tile');
         tiles.forEach(tile => tile.remove());
         
-        // 添加所有方块
+        const cells = document.querySelectorAll('.cell');
+        if (cells.length === 0) return;
+        const cell = cells[0];
+        const cellRect = cell.getBoundingClientRect();
+        const cellSize = cellRect.width;
+        const gap = 15;
+        
         for (let row = 0; row < 4; row++) {
             for (let col = 0; col < 4; col++) {
                 const value = grid[row][col];
@@ -79,10 +84,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     tile.className = `tile tile-${value}`;
                     tile.textContent = value;
                     
-                    // 计算位置
-                    const x = col * (25 + 15) + 15;
-                    const y = row * (25 + 15) + 15;
+                    const x = col * (cellSize + gap) + gap;
+                    const y = row * (cellSize + gap) + gap;
                     
+                    tile.style.width = `${cellSize}px`;
+                    tile.style.height = `${cellSize}px`;
                     tile.style.left = `${x}px`;
                     tile.style.top = `${y}px`;
                     
@@ -91,6 +97,9 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     }
+    
+    // 监听窗口大小变化，重新渲染方块位置
+    window.addEventListener('resize', renderBoard);
     
     // 移动方块
     function moveTiles(direction) {
