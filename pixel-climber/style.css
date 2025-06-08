@@ -1,0 +1,55 @@
+#game-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#game-canvas {
+    display: block;
+    background-color: #70a7ff;
+    width: 100%;
+    height: 100%;
+}
+
+#ui {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    text-shadow: 2px 2px 0 #000;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#restart-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #8B4513;
+    color: white;
+    border: 3px solid #5D2906;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    z-index: 100;
+}
+
+#back-btn {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #8B4513;
+    color: white;
+    border: 3px solid #5D2906;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    z-index: 100;
+    text-decoration: none;
+}
+
+#restart-btn:hover, #back-btn:hover {
+    background-color: #A0522D;
+}
