@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>2048</h1>
+            <div class="scores">
+                <div class="score-box">
+                    <div class="score-title">分数</div>
+                    <div id="score" class="score-value">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-title">最高分</div>
+                    <div id="best-score" class="score-value">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-intro">
+            使用<strong>方向键</strong>或<strong>WASD</strong>移动方块。当两个相同数字的方块相撞时，它们会合并成一个！
+        </div>
+        
+        <div id="game-board" class="game-board"></div>
+        
+        <div class="game-controls">
+            <button id="new-game-btn">新游戏</button>
+            <a href="../" class="back-btn">返回主页</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
