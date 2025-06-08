@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太空射击</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>太空射击</h1>
+        
+        <div class="game-info">
+            <div>分数: <span id="score">0</span></div>
+            <div>生命: <span id="lives">3</span></div>
+            <div>等级: <span id="level">1</span></div>
+            <button id="start-btn">开始游戏</button>
+            <a href="../" class="back-btn">返回主页</a>
+        </div>
+        
+        <canvas id="game-canvas"></canvas>
+        
+        <div id="game-over" class="game-over hidden">
+            <h2>游戏结束</h2>
+            <p>最终分数: <span id="final-score">0</span></p>
+            <button id="restart-btn">再玩一次</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
