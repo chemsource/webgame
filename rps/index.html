@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>石头剪刀布</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>石头剪刀布</h1>
+        
+        <div class="game-info">
+            <div>玩家: <span id="player-score">0</span></div>
+            <div>电脑: <span id="computer-score">0</span></div>
+            <div>平局: <span id="draws">0</span></div>
+            <button id="reset-btn">重置</button>
+            <a href="../" class="back-btn">返回主页</a>
+        </div>
+        
+        <div class="choices">
+            <button class="choice-btn" data-choice="rock">✊</button>
+            <button class="choice-btn" data-choice="paper">✋</button>
+            <button class="choice-btn" data-choice="scissors">✌️</button>
+        </div>
+        
+        <div id="result" class="result">
+            <p>选择石头、剪刀或布开始游戏</p>
+        </div>
+        
+        <div class="game-history">
+            <h3>游戏记录</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
