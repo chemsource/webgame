@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字华容道</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>数字华容道</h1>
+        
+        <div class="game-controls">
+            <button id="mode1-btn">经典数字模式</button>
+            <button id="mode2-btn">传统华容道模式</button>
+            <button id="reset-btn">重新开始</button>
+            <button id="auto-solve-btn">自动完成</button>
+        </div>
+        
+        <div class="game-info">
+            <div id="moves-counter">移动步数: 0</div>
+            <div id="timer">时间: 00:00</div>
+        </div>
+        
+        <div class="game-container">
+            <div id="game-board" class="mode1">
+                <!-- 游戏方块将通过JS动态生成 -->
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>游戏说明</h3>
+            <p id="mode-description">经典数字模式：点击与空白相邻的数字块进行移动，将数字按1-15的顺序排列</p>
+            <div id="legend" class="hidden">
+                <div class="legend-item">
+                    <div class="legend-block size-2x2">0</div>
+                    <span>曹操（2×2）</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-block size-1x2 vertical">1</div>
+                    <span>关羽（1×2）</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-block size-1x1">6</div>
+                    <span>小兵（1×1）</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
