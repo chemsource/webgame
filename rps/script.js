@@ -124,3 +124,50 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     // 事件监听
+    choiceButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const playerChoice = button.dataset.choice;
+            playGame(playerChoice);
+            
+            // 添加点击动画效果
+            button.classList.add('clicked');
+            setTimeout(() => {
+                button.classList.remove('clicked');
+            }, 200);
+        });
+    });
+
+    resetButton.addEventListener('click', resetGame);
+
+    // 键盘快捷键支持
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'r') {
+            playGame('rock');
+            highlightChoice('rock');
+        } else if (e.key === 'p') {
+            playGame('paper');
+            highlightChoice('paper');
+        } else if (e.key === 's') {
+            playGame('scissors');
+            highlightChoice('scissors');
+        } else if (e.key === 'Escape') {
+            resetGame();
+        }
+    });
+
+    // 高亮显示选择的选项
+    function highlightChoice(choice) {
+        choiceButtons.forEach(button => {
+            button.classList.remove('highlight');
+            if (button.dataset.choice === choice) {
+                button.classList.add('highlight');
+                setTimeout(() => {
+                    button.classList.remove('highlight');
+                }, 500);
+            }
+        });
+    }
+
+    // 初始化游戏
+    resetGame();
+});
