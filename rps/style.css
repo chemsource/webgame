@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.game-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-top: 0;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.choice-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn:active {
+    transform: scale(0.95);
+}
+
+.result {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.game-history {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.game-history h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+#history-list {
+    list-style-type: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#history-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.win {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.lose {
+    color: #f44336;
+    font-weight: bold;
+}
+
+.draw {
+    color: #FFC107;
+    font-weight: bold;
+}
+
+button, .back-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .back-btn:hover {
+    background-color: #45a049;
+}
+
+#reset-btn {
+    background-color: #f44336;
+}
+
+#reset-btn:hover {
+    background-color: #d32f2f;
+}
+
+@media (max-width: 480px) {
+    .choices {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .choice-btn {
+        width: 70px;
+        height: 70px;
+        font-size: 35px;
+    }
+}
