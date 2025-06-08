@@ -141,15 +141,28 @@ button:hover, .back-btn:hover {
     background-color: #d32f2f;
 }
 
+/* 添加在现有样式之后 */
+
+.choice-btn.clicked {
+    transform: scale(0.9);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.choice-btn.highlight {
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.8);
+    background-color: #66BB6A;
+}
+
+/* 键盘快捷键提示 */
+.key-hint {
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* 响应式调整 */
 @media (max-width: 480px) {
-    .choices {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .choice-btn {
-        width: 70px;
-        height: 70px;
-        font-size: 35px;
+    .key-hint {
+        display: none;
     }
 }
