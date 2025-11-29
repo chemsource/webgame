@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 游戏设置
     const gridSize = 20;
-    const tileCount = 20;
+    const tileCount = 15;
     canvas.width = gridSize * tileCount;
     canvas.height = gridSize * tileCount;
     
